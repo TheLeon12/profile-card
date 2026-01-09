@@ -1,0 +1,133 @@
+.card {
+  width: min(800px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 20px 14px 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.00)
+  );
+}
+
+.identity {
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  margin: 6px 0 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.meta {
+  margin: 8px 0 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Body */
+.body {
+  padding: 0 20px 20px 20px;
+}
+
+.bio {
+  margin: 12px 0 0 0;
+  color: var(--text);
+  line-height: 1.5;
+  opacity: 0.92;
+
+  /* Evita que textos largos rompan el layout */
+  word-break: break-word;
+
+  /* Limita a 2 líneas sin cortar feo (degrada bien si no soporta) */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.skillsBlock {
+  margin-top: 16px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.skillsList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Actions */
+.actionsRow {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.secondaryButton {
+  appearance: none;
+  border: 1px solid var(--stroke);
+  background: transparent;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-1px);
+  background: var(--surface-strong);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+@media (min-width: 560px) {
+  .actionsRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
