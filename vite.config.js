@@ -1,14 +1,7 @@
-
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-react'
-import { fileURLToPath, URL } from 'node:url'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/gestor-peliculas-vue/',
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+  base: '/profile-card/',
 })
