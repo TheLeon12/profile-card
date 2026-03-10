@@ -1,11 +1,17 @@
 .wrapper {
-  border-radius: 999px;
+  border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--stroke);
-  background: rgba(255, 255, 255, 0.08);
+  border: 4px solid var(--surface-strong);
+  background: var(--surface-strong);
   display: grid;
   place-items: center;
   flex: 0 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+  transform: scale(1.05);
 }
 
 .image {
@@ -20,12 +26,10 @@
   height: 100%;
   display: grid;
   place-items: center;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.92);
-  background: radial-gradient(
-    120px 120px at 30% 30%,
-    rgba(99, 179, 237, 0.35),
-    rgba(255, 255, 255, 0.06)
-  );
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
